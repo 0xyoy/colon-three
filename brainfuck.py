@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!python3
 #
 # Brainfuck Interpreter
 # Copyright 2011 Sebastian Kaspari
