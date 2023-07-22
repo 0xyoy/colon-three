@@ -1,9 +1,9 @@
 #!python3
 #
-# Brainfuck Interpreter
-# Copyright 2011 Sebastian Kaspari
-#
-# Usage: ./brainfuck.py [FILE]
+# :3 interpreter, based on Brainfuck Interpreter
+# Copyright 2011 Sebastian Kaspari, 2023 Anna
+# 
+# Usage: ./:3.py [FILE]
 
 import sys
 import getch
@@ -15,7 +15,7 @@ def execute(filename):
 
 
 def evaluate(code):
-  code     = cleanup(list(code))
+  code     = cleanup(list(decode(code)))
   bracemap = buildbracemap(code)
 
   cells, codeptr, cellptr = [0], 0, 0
@@ -47,6 +47,16 @@ def evaluate(code):
 def cleanup(code):
   return ''.join(filter(lambda x: x in ['.', ',', '[', ']', '<', '>', '+', '-'], code))
 
+def decode(code):
+  code = code.replace(":3333", "[")
+  code = code.replace(":cccc", "]")
+  code = code.replace(":333", ",")
+  code = code.replace(":ccc", ".")
+  code = code.replace(":33", "+")
+  code = code.replace(":cc", "-")
+  code = code.replace(":3", ">")
+  code = code.replace(":c", "<")
+  return code
 
 def buildbracemap(code):
   temp_bracestack, bracemap = [], {}
