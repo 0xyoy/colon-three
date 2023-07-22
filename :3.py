@@ -1,7 +1,7 @@
 #!python3
 #
 # :3 interpreter, based on Brainfuck Interpreter
-# Copyright 2011 Sebastian Kaspari, 2023 Anna
+# Copyright 2011 Sebastian Kaspari, 2023 anna
 # 
 # Usage: ./:3.py [FILE]
 
