@@ -20,3 +20,5 @@ this is literally just brainfuck but with keywords changed:
 - \. becomes :ccc
 - \[ becomes :3333
 - \] becomes :cccc
+
+demos are generated from code from "http://brainfuck.org"
